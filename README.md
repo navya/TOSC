@@ -1,4 +1,4 @@
-## This Repository depends on next version of Javascript, so expect some unusual changes around. If you want to learn more koa- read - https://code.tutsplus.com/series/introduction-to-generators-koajs--cms-690
+# This Repository depends on next version of Javascript, so expect some unusual syntactical changes around. If you want to learn more koa- read - https://code.tutsplus.com/series/introduction-to-generators-koajs--cms-690
 
 
 # Koa Based Result Portal
@@ -10,8 +10,8 @@
 
 
 ```
-$ git clone https://github.com/bhanuc/dictapi.git
-$ cd dictapi
+$ git clone https://github.com/navya/TOSC.git
+$ cd TOSC
 ```
 ```
 $ npm install 
