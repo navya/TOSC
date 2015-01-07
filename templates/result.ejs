@@ -36,14 +36,7 @@
 <div id="result">
   <p id="name">Name: <%= res.Name %></p>
   <p id="roll">Roll: <%= res.Rollno %></p>
-  <p id="pool">Pool: <%= res.Pool %></p>
   <p id="score">Score: <%= res.Score %></p>
-    <% if(res.Score >= 60) { %>
-  <p id="message">Congratulations, You have been shortlisted for the Second round of TOSC</p>
-      <% }  else { %>
-  <p id="message">Sorry, you have not been shortlisted for the next round.</p>
-      <% } %>
-
 </div>          
 <% }  else { %>
 <div id="result">Your Result was not found. Please try and use a different method.

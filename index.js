@@ -12,10 +12,10 @@ app.use(router(app));
 //app.use(public_dir(__dirname + "/public"));
 
 
-app.get('/', api.home);
+app.get('/tosc_results', api.home);
 
-app.get('/result', api.result);
-app.get('/phone', api.phone);
+app.get('//osc_results/result', api.result);
+app.get('/tosc_results/phone', api.phone);
 
 app.use(function *(next){
   try {
