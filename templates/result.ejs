@@ -101,21 +101,31 @@
 </head>
 <body>
 
+
    <% if(res) { %>
 <!-- the result of the search will be rendered inside this div -->
 <div id="result">
+ <div id="head"></div><hr>
   <p id="name">Name: <%= res.Name %></p>
   <p id="roll">Roll: <%= res.Rollno %></p>
   <p id="score">Score: <%= res.Score %></p>
+   <hr>
+<% if((res.Pool == 'A' && res.Score >= 82) || (res.Pool == 'B' && res.Score >= 69) ) { %>
+  <p id="message">Congratulations, You have been shortlisted for the Second round of TOSC</p>
+      <% }  else { %>
+  <p id="message">Sorry, you have not been shortlisted for the next round.</p>
+      <% } %>
+</div>   
 </div>          
 <% }  else { %>
-<div id="result">Your Result was not found. Please try and use a different method.
-          <% }  %>
-          </div>
+<div id="result">Your Result was not found. <br>
+  <p class="case">Results for TOSC LUCKNOW are being processed and will be released very soon. Stay tuned .</p>
+            <% }  %>
+          </div> 
 
   <div id="information">
   
-  <a href="/poolA_result/" target="_blank">
+  <a href="http://techkriti.org/tosc/poolAResults.pdf" target="_blank">
   <div id="poolAResults" class="blocks">
     <table>
       <tr>
@@ -148,7 +158,7 @@
     </table>
   </div>
 
-  <a href="/poolB_result/" target="_blank">
+  <a href="http://techkriti.org/tosc/poolBResults.pdf" target="_blank">
   <div id="poolAResults" class="blocks">
     <table>
       <tr>
