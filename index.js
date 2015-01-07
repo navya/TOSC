@@ -14,8 +14,7 @@ app.use(router(app));
 
 app.get('/tosc_results', api.home);
 
-app.get('//osc_results/result', api.result);
-app.get('/tosc_results/phone', api.phone);
+app.get('/tosc_results/result', api.result);
 
 app.use(function *(next){
   try {
