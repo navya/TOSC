@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TOSC Result</title>
+
+  <style type="text/css">
+
+  	body
+  	{
+  		background-color: rgba(242, 242, 242, 0.7);
+  		font-family: arial;
+  	}
+
+  	form
+  	{
+  		width: 600px;
+  		margin: 0 auto;
+  		padding: 10px;
+  		text-align: center;
+  	}
+
+  	#rollbox
+  	{
+  		border: 1px solid #ccc;
+  		background-color: white;
+  		padding: 10px;
+  		width: 200px;
+  	}
+
+  	#submitButton
+  	{
+  		border: 1px solid #ccc;
+  		background-color: #318943;
+  		padding: 10px;
+  		width: 60px;	
+  		color: white;
+  		cursor: pointer;
+  	}
+
+
+
+  </style>
+</head>
+<body>
+ 
+<form action="/result" id="searchForm" >
+  Search Using Roll No: <input type="text" name="rollno" placeholder="Roll No" autocomplete="on">
+  <input type="submit" value="Search" id="submitButton">
+</form>
+<form action="/phone" id="searchForm2" >
+  Search Using Phone No: <input type="text" name="phone" placeholder="phoneno"  autocomplete="on">
+  <input type="submit" value="Search" id="submitButton">
+</form>
+<!-- the result of the search will be rendered inside this div -->
+</div>
+ 
+ 
+</body>
+</html>
