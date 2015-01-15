@@ -1,4 +1,4 @@
- mongoimport -d mydb -c results --type csv --file poolA-n-2.csv --headerline 
+ mongoimport -d mydb -c results --type csv --file poolA-n-2.csv --headerline 		TOS
 
 
 //Below is the command to convert all the numlong phone numbers which I had faced some difficulty in querying using monk, so instead of searching around I thought to convert all of them into strings
@@ -12,3 +12,19 @@ db.results.find({}).forEach(function(doc) {
         )
     }
 })
+
+db.results.find({}).forEach(function(doc) { 
+    if(doc.hasOwnProperty('RollNo')) { 
+        print('found string: ' + doc._id);
+        	 db.results.update( 
+           { _id: doc._id}, 
+           { $set : { "Rollno" : doc['RollNo'] } }
+        )
+    }
+})
+
+db.results.find({}).count()
+        db.results.update( 
+           { _id: doc._id}, 
+           { $set : { "Phone Number" : doc['Phone Number'].toString().match(/\d+/)[0] } }
+        )
